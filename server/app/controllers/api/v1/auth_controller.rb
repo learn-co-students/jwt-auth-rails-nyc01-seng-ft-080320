@@ -19,3 +19,6 @@ class Api::V1::AuthController < ApplicationController
     params.require(:user).permit(:username, :password)
   end
 end
+
+# jwt needs to be sent out here (and in users#create) because jwt
+# are useful & needed when creating a new nuser and authintacating an existing one 
