@@ -7,6 +7,7 @@ class ApplicationController < ActionController::API
 
   def auth_header
     request.headers['Authorization'] # Bearer <token>
+    # only works if fetch request headers include an 'Authorization: 'Bearer <toke>' header
   end
 
   def decoded_token
